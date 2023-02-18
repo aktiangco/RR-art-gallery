@@ -69,3 +69,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # art-gallery
+## Planning
+Now we want to plan our application.
+
+- We will build a React application with the following functionality:
+  - Fetch and display a work of art
+  - Present buttons to go forward in the gallery, rendering a new work of art
+  - Present buttons to go backward in the gallery, rendering a past work of art
+- What types of components do we want to generate for this application?
+  - App
+    - A gallery frame
+    - A buttons bar
+- What values are we storing in state?
+  - The current artwork's integer ID to make the API call
+    - Our buttons will iterate this integer.
+    - This is what our useEffect will use to listen for changes.
+    - This number can be anything between 1 and 471,581, as the API has 471,581 objects in the collection.
+- The data returned from the API call
+  - Our gallery frame will display an image from the API call.
+  - useEffect will set this state after rendering.
